@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: sudoers
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Configure sudoers
   company: Open Microscopy Environment

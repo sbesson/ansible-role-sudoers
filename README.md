@@ -1,6 +1,9 @@
 Sudoers
 =======
 
+[![Build Status](https://travis-ci.org/ome/ansible-role-sudoers.svg)](https://travis-ci.org/ome/ansible-role-sudoers)
+[![Ansible Role](https://img.shields.io/ansible/role/14871.svg)](https://galaxy.ansible.com/ome/sudoers/)
+
 Configure sudoers.
 
 TODO: Expand this role
@@ -17,7 +20,7 @@ Example Playbook
 
     - hosts: localhost
       roles:
-      - role: sudoers
+      - role: ome.sudoers
         sudoers_individual_commands:
         - user: user1
           become: root

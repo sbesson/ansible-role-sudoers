@@ -3,3 +3,7 @@
   hosts: all
   roles:
     - role: ansible-role-sudoers
+      sudoers_individual_commands:
+        - user: "%root"
+          become: ALL
+          command: "NOPASSWD: ALL"

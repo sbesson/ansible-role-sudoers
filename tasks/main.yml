@@ -16,7 +16,7 @@
     dest: /etc/sudoers
     line: '#includedir /etc/sudoers.d'
     state: present
-    validate: visudo -cf %s
+    validate: /usr/sbin/visudo -cf %s
 
 - name: sudo | setup individual users and commands
   become: true
@@ -24,5 +24,5 @@
     src: sudoers-individual_commands.j2
     dest: /etc/sudoers.d/sudoers-individual_commands
     backup: false
-    validate: visudo -cf %s
+    validate: /usr/sbin/visudo -cf %s
   when: sudoers_individual_commands | default([])

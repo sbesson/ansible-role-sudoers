@@ -2,7 +2,7 @@
 # Configure sudo
 
 - name: system packages | install sudo
-  become: yes
+  become: true
   yum:
     pkg: "{{ item }}"
     state: present
@@ -10,19 +10,19 @@
     - sudo
 
 - name: sudo | enable sudoers.d
-  become: yes
+  become: true
   lineinfile:
-    backup: yes
+    backup: true
     dest: /etc/sudoers
     line: '#includedir /etc/sudoers.d'
     state: present
-    validate: visudo -cf %s
+    validate: /usr/sbin/visudo -cf %s
 
 - name: sudo | setup individual users and commands
-  become: yes
+  become: true
   template:
     src: sudoers-individual_commands.j2
     dest: /etc/sudoers.d/sudoers-individual_commands
-    backup: no
-    validate: visudo -cf %s
+    backup: false
+    validate: /usr/sbin/visudo -cf %s
   when: sudoers_individual_commands | default([])

@@ -1,7 +1,7 @@
 Sudoers
 =======
 
-[![Build Status](https://travis-ci.org/ome/ansible-role-sudoers.svg)](https://travis-ci.org/ome/ansible-role-sudoers)
+[![Actions Status](https://github.com/ome/ansible-role-sudoers/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-sudoers/actions)
 [![Ansible Role](https://img.shields.io/ansible/role/41407.svg)](https://galaxy.ansible.com/ome/sudoers/)
 
 Configure sudoers.

@@ -25,4 +25,5 @@
     dest: /etc/sudoers.d/sudoers-individual_commands
     backup: false
     validate: /usr/sbin/visudo -cf %s
+    mode: 0644
   when: sudoers_individual_commands | default([])
